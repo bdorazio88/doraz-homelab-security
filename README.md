@@ -36,6 +36,8 @@ The lab is built for realism with production-like configurations and minimal ext
 | Wazuh Stack       | SIEM Learning                    | LAN only         |
 
 ![image](https://github.com/user-attachments/assets/22509135-ef17-4435-aec6-5b2cc875df88)
+![image](https://github.com/user-attachments/assets/5afb6e05-ed83-47f4-b59c-28f323b99765)
+
 
 ---
 
