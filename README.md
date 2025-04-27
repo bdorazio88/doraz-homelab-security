@@ -51,7 +51,7 @@ Wazuh agents are installed to monitor and forward security events from lab endpo
 Event data is collected, processed by the Wazuh Manager, and visualized through the Wazuh Dashboard.
 
 ![image](https://github.com/user-attachments/assets/f37a26e9-7939-41db-97fd-40acc6d4f0d2)
-
+![image](https://github.com/user-attachments/assets/ef824f9c-5269-4129-a812-e2551c8f7b73)
 
 ---
 
