@@ -13,29 +13,9 @@ The lab is built for realism with production-like configurations and minimal ext
 
 ## Topology
 
-[Internet]
-     |
- [Router] (192.168.2.1)
-     |
- [Gigabit Switch]----[Wi-Fi Devices]
-     |
- -------------------------------
- |            |                |
- |            |                |
-Workstation   Server         NAS Storage
- Windows 11   Ubuntu 24.04    WD My Cloud
- 192.168.2.72 192.168.2.134   192.168.2.54
+![image](https://github.com/user-attachments/assets/21b75559-2004-45b6-b413-3732276d312a)
 
-LAN Subnet: 192.168.2.0/24
 
----
-
-## Networking
-
-- Internet Connection: Fiber 1.5Gbps down / 940Mbps up
-- Router: Bell Home Hub 3000
-- Switch: D-Link 8-port Gigabit unmanaged switch
-- Firewall: UFW active on Ubuntu Server (default deny inbound)
 
 ---
 
@@ -55,7 +35,7 @@ LAN Subnet: 192.168.2.0/24
 |:------------------|:---------------------------------|:-----------------|
 | Plex Media Server | Media streaming (LAN-only)       | LAN only         |
 | Portainer CE      | Docker container management      | LAN only         |
-| Wazuh Stack       | SIEM deployment                  | LAN only         |
+| Wazuh Stack       | SIEM Learning                    | LAN only         |
 
 ---
 
