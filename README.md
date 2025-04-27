@@ -1,9 +1,16 @@
 # doraz-homelab-security
 Small scale homelab environment focused on learning and implementing core cybersecurity concepts
 
+
+
+
+
 ==================================================================================
 Doraz Homelab v1
 ==================================================================================
+              
+                    
+                    
                     [Internet]
                          |
                      (Router)
@@ -20,6 +27,11 @@ Doraz Homelab v1
  WIN11         Ubuntu        WD My Cloud
  192.168.2.72  192.168.2.134    192.168.2.54
 
+
+
+
+
+
 ==================================================================================
 Networking
 ==================================================================================
@@ -28,6 +40,7 @@ Internet Service: Fiber Gigabit — 1.5GB down / 940MB up
 Router: Home Hub 3000 — 192.168.2.1
 
 Switch: D-Link DGS-108 — 8-Port Gigabit Unmanaged
+
 ==================================================================================
 Compute/Storage
 ==================================================================================
@@ -36,6 +49,7 @@ Workstation (WIN11): Asus ROG (Ryzen 5 5600X / RTX 3060 / 32GB RAM / 1.5TB SSD)
 Server (Ubuntu 24 LTS): Mac mini (intel i5 / 8GB RAM / 512GB SSD)
 
 NAS: WD 8TB My Cloud EX2 (2x Seagate Iron Wolf Pro 4TB drives) — 192.168.2.54
+
 ==================================================================================
 Plex Setup
 ==================================================================================
@@ -46,6 +60,7 @@ Plex Setup
     |
     v
 [ Plex Clients (TVs, Phones, etc.) ]
+
 ==================================================================================
 Media Flow:
 ==================================================================================
@@ -57,6 +72,7 @@ Media is saved directly onto the NAS instead of locally on Windows.
 Plex server (running via Docker on Ubuntu server) scans NAS share for updates.
 
 Plex clients (smart TVs, phones, tablets, etc.) access the Plex server while on 192.168.2.0/24 network.
+
 ==================================================================================
 Services Running on Server
 ==================================================================================
@@ -75,11 +91,3 @@ Services Running on Server
   - Dashboard: wazuh/wazuh-dashboard (443 TCP)
   - Indexer: wazuh/wazuh-indexer (9200 TCP)
   - Purpose: Host security monitoring and analysis
-==================================================================================
-Admin Access URLs
-==================================================================================
-| Service  | URL                                  |
-|:---------|:-------------------------------------|
-| Plex     | http://192.168.2.134:32400/web        |
-| Portainer| http://192.168.2.134:9000             |
-| Wazuh    | https://192.168.2.134 (self-signed cert) |
