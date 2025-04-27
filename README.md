@@ -13,8 +13,7 @@ The lab is built for realism with production-like configurations and minimal ext
 
 ## Topology
 
-![image](https://github.com/user-attachments/assets/34c50bcb-6e5f-499d-954e-8f6967943088)
-
+![image](https://github.com/user-attachments/assets/f2a309f4-5f71-46f1-a2a7-2f7bd9db22cf)
 
 ---
 
