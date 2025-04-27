@@ -13,23 +13,18 @@ The lab is built for realism with production-like configurations and minimal ext
 
 ## Topology
 
-WAN ------------------>
-                         |
-                     (Router)
-                     192.168.2.1
-                         |
-          ---------------------------------
-         |                                 |
-  [Gigabit 8-port Switch]           [Wi-Fi Devices]
-         |                                 |
-  -----------------------------    ------------------------------
- |             |               |   
- |             |               |
-[Workstation] [Server]      [NAS Storage]
- WIN11         Ubuntu        WD My Cloud
- 192.168.2.72  192.168.2.134    192.168.2.54
-
-
+[Internet]
+     |
+ [Router] (192.168.2.1)
+     |
+ [Gigabit Switch]----[Wi-Fi Devices]
+     |
+ -------------------------------
+ |            |                |
+ |            |                |
+Workstation   Server         NAS Storage
+ Windows 11   Ubuntu 24.04    WD My Cloud
+ 192.168.2.72 192.168.2.134   192.168.2.54
 
 LAN Subnet: 192.168.2.0/24
 
