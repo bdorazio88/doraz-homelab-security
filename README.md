@@ -1,17 +1,17 @@
 # doraz-homelab-security
-Small scale homelab environment focused on learning and implementing core cybersecurity concepts
 
+## 📜 Project Overview
+Small scale homelab environment focused on learning and implementing core cybersecurity concepts:
+- Network segmentation
+- Secure service deployment
+- SIEM monitoring (Wazuh)
+- Honeypot deployment (Cowrie)
 
+---
 
+## 🏠 Homelab v1 Diagram
 
-
-==================================================================================
-Doraz Homelab v1
-==================================================================================
-              
-                    
-                    
-                    [Internet]
+                     [Internet]
                          |
                      (Router)
                      192.168.2.1
@@ -27,67 +27,53 @@ Doraz Homelab v1
  WIN11         Ubuntu        WD My Cloud
  192.168.2.72  192.168.2.134    192.168.2.54
 
+---
 
+## 📡 Networking
+- **Internet Service:** Fiber Gigabit — 1.5GB down / 940MB up
+- **Router:** Bell Home Hub 3000 (192.168.2.1)
+- **Switch:** Gigabit 8-Port Unmanaged Switch
+- **LAN Subnet:** 192.168.2.0/24
 
+---
 
+## 🖥️ Compute & Storage
+| Device        | OS / Details        | IP Address     |
+|:--------------|:--------------------|:---------------|
+| Workstation   | Windows 11 (ROG)     | 192.168.2.72   |
+| Server        | Ubuntu 24.04 LTS (Docker Host) | 192.168.2.134  |
+| NAS Storage   | WD My Cloud (8TB)    | 192.168.2.54   |
 
+---
 
-==================================================================================
-Networking
-==================================================================================
-Internet Service: Fiber Gigabit — 1.5GB down / 940MB up
+## 🔥 Services Deployed
+| Service | Description | Exposure |
+|:---|:---|:---|
+| Plex Media Server | LAN media streaming | LAN only |
+| Portainer CE | Docker management UI | LAN only |
+| Wazuh SIEM Stack | Security event monitoring | LAN only |
+| Cowrie Honeypot | Fake SSH server for attack capture | WAN exposed on port 22 |
 
-Router: Home Hub 3000 — 192.168.2.1
+---
 
-Switch: D-Link DGS-108 — 8-Port Gigabit Unmanaged
+##  Skills Practiced
+- Threat detection and incident analysis
+- Firewall hardening and network isolation
+- Security event monitoring (Wazuh SIEM)
+- Honeypot deployment and attacker data capture
+- Infrastructure as Code (Docker Compose)
 
-==================================================================================
-Compute/Storage
-==================================================================================
-Workstation (WIN11): Asus ROG (Ryzen 5 5600X / RTX 3060 / 32GB RAM / 1.5TB SSD)
+---
 
-Server (Ubuntu 24 LTS): Mac mini (intel i5 / 8GB RAM / 512GB SSD)
+- Wazuh alert logs
+- Firewall UFW rules
+- Docker container status
 
-NAS: WD 8TB My Cloud EX2 (2x Seagate Iron Wolf Pro 4TB drives) — 192.168.2.54
+---
 
-==================================================================================
-Plex Setup
-==================================================================================
-[ NAS ]
-    |
-    v
-[ Server (Ubuntu 24 LTS + Docker + Plex Server) ]
-    |
-    v
-[ Plex Clients (TVs, Phones, etc.) ]
+# 🧹 Notes
+- Internal IP addresses (192.168.x.x) are private and non-routable.
+- No credentials, public IPs, or sensitive data exposed.
 
-==================================================================================
-Media Flow:
-==================================================================================
+---
 
-Download media using the Windows workstation.
-
-Media is saved directly onto the NAS instead of locally on Windows.
-
-Plex server (running via Docker on Ubuntu server) scans NAS share for updates.
-
-Plex clients (smart TVs, phones, tablets, etc.) access the Plex server while on 192.168.2.0/24 network.
-
-==================================================================================
-Services Running on Server
-==================================================================================
-- Plex Media Server 
-  - Docker container: linuxserver/plex
-  - Port: 32400 (TCP)
-  - Purpose: Streams media from NAS to clients (TVs, phones, tablets)
-
-- Portainer 
-  - Docker container: portainer/portainer-ce + portainer/agent
-  - Ports: 9000 (Portainer UI), 9001 (Agent)
-  - Purpose: GUI management for Docker containers
-
-- Wazuh Security Stack (Single Node)  
-  - Manager: wazuh/wazuh-manager (1514-1515 TCP, 514 UDP, 55000 TCP)
-  - Dashboard: wazuh/wazuh-dashboard (443 TCP)
-  - Indexer: wazuh/wazuh-indexer (9200 TCP)
-  - Purpose: Host security monitoring and analysis
