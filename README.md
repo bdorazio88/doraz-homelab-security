@@ -13,9 +13,7 @@ The lab is built for realism with production-like configurations and minimal ext
 
 ## Topology
 
-![image](https://github.com/user-attachments/assets/21b75559-2004-45b6-b413-3732276d312a)
-
-
+![image](https://github.com/user-attachments/assets/e309ef04-7586-495e-a1d5-aa28f048a719)
 
 ---
 
@@ -36,6 +34,8 @@ The lab is built for realism with production-like configurations and minimal ext
 | Plex Media Server | Media streaming (LAN-only)       | LAN only         |
 | Portainer CE      | Docker container management      | LAN only         |
 | Wazuh Stack       | SIEM Learning                    | LAN only         |
+
+![image](https://github.com/user-attachments/assets/22509135-ef17-4435-aec6-5b2cc875df88)
 
 ---
 
