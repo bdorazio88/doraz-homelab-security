@@ -1,4 +1,4 @@
-# Doraz Homelab - Infrastructure and Security Lab
+# Homelab - Infrastructure and Security Lab
 
 ## Overview
 
